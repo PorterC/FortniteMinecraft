@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-html {
-	background-color:#ff23e5;
-
-}
-h1{
-	color:#16dcff;
-}
-h2{
-	color:#16dcff;
-}
-button{
-	color:#ff23e5;
-}
-button{
-	background-color: #00e507;
-}
-
-</style>
- <title>FortniteMinecraft</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+	<link href="minecraftstyle.css" rel="stylesheet" id="master_style">
+ <title>Minecraft Fortnite</title>
 </head>
 <body>
   <meta charset="utf-8">
@@ -29,26 +13,46 @@ button{
 
  
 
-	<h1 style="text-align:center;">  Minecraft 
-		Fortnite </h1> 
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/eyd51lvu3xw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	
-	 <img id="toaster" src="Images/TransparentToasterGif.gif" width="250" height="250" alt="TransparentToasterGif">
-	
+	<h1 id="h1"   style="text-align:center;" >  Minecraft 
+		Fortnite  </h1> 
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/eyd51lvu3xw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<h2 id="rc1">
 		Respect Counter 1: <span class="count">0</span> 
-		<button>F</button>
+		<button id="btn1">F</button>
 	</h2>
 	
 	<h2 id="rc2">
 		Respect Counter 2: <span class="count">1</span> 
-		<button>F</button>
+		<button id="btn2">F</button>
 	</h2>
+
+<button id="btn5">Make Toaster Fly</button>
+	<div style="background:#98bf21;height:0px;width:0px;position:absolute;"> <img id="toaster" src="Images/TransparentToasterGif.gif" width="250" height="250" alt="TransparentToasterGif"> </div>
+	<button type="button" class="change-colors" id="btn3">Colours That won't make your eyes hurt.</button>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
-<script type='text/javascript'>
-	
-	console.log('Hello');
+<script type='text/javascript'>	
+	var goodstyle = false;
+
+	jQuery(document).ready(function(){
+  jQuery("#btn5").click(function(){
+  	  var div = $("div"); 
+  	  	div.animate({left: '600px'})
+  });
+});
+
+	jQuery('.change-colors').on('click', function() {
+		if(!goodstyle) {
+			document.getElementById("master_style").href = "goodstyle.css";
+			goodstyle = true;
+		}
+		else {
+			document.getElementById("master_style").href = "minecraftstyle.css";
+			goodstyle= false;
+		}
+	});
 	
 	jQuery("#rc1 button").on("click", function() {
 		var $count = jQuery("#rc1 .count");
@@ -62,12 +66,6 @@ button{
 		respects = respects * 2;
 		$count.text( respects );
 	});
-
-	console.log(jQuery("#toaster"));
 	
-	
-
 </script> 
 </html>
-  
-	

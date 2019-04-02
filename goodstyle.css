@@ -1,0 +1,21 @@
+body { 
+	  background-color: #0a4e63 !important ; 
+ }
+
+h1 {
+ 	font-family: 'Noto Sans', sans-serif;
+	color:#1695cc;
+	font-size: 60px;
+}
+
+h2 {
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #1695cc;
+	font-size: 20px;
+}
+
+button{
+	color:#0a4e63;
+	background-color:#0177a8;
+	font-size: 20px;
+}
