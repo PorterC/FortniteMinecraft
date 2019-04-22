@@ -5,17 +5,32 @@ body {
 h1 {
  	font-family: 'Noto Sans', sans-serif;
 	color:#1695cc;
-	font-size: 60px;
+	font-size: 65px;
 }
 
-h2 {
+#rc1{
 	font-family: 'Noto Sans TC', sans-serif;
-	color: #1695cc;
-	font-size: 20px;
-}
+	color:#1695cc;
+	font-size: 25px;
 
+}
+#rc1{
+	position: absolute;
+	top: 300px;
+	left: 600px;
+}
+#rc2{
+	font-family: 'Noto Sans TC', sans-serif;
+	color:#1695cc;
+	font-size: 25px;
+}
+#rc2{
+	position: absolute;
+	top: 250px;
+	left: 600px;
+}
 button{
 	color:#0a4e63;
 	background-color:#0177a8;
-	font-size: 20px;
+	font-size: 25px;
 }
