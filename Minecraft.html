@@ -12,15 +12,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
  
-
-	<h1 id="h1"   style="text-align:center;" >  Minecraft 
-		Fortnite  </h1> 
+  <div class="header">
+	<h1  align="center">  Minecraft Fortnite  </h1> 
+</div>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/7WFQLHPkknY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<h2 id="rc1">
 		Respect Counter 1: <span class="count">0</span> 
 		<button id="btn1">F</button>
 	</h2>
-	
+	<div align="center" style="border:5px solid green">
+	<p id="minecraft"><P>
+		<button id="btn6">Play Minecraft</button>
+	</div>
 	<h2 id="rc2">
 		Respect Counter 2: <span class="count">1</span> 
 		<button id="btn2">F</button>
@@ -34,6 +37,21 @@
 </body>
 <script type='text/javascript'>	
 	var goodstyle = false;
+	var yes = false;
+
+  jQuery("#btn6").click(function(){
+  	if(!yes) {
+    jQuery("#minecraft").text("You are now playing Minecraft! Do you: Obtain wood or Die?");
+    jQuery("#btn6").text("Yes")
+    yes = true;
+	}
+	else {
+		jQuery("#minecraft").text("You died.");
+    jQuery("#btn6").text("Retry")
+    yes = false;
+	}
+  });
+
 
 	jQuery(document).ready(function(){
   jQuery("#btn5").click(function(){
@@ -44,10 +62,12 @@
 	jQuery('.change-colors').on('click', function() {
 		if(!goodstyle) {
 			document.getElementById("master_style").href = "goodstyle.css";
+			jQuery("#btn3").text("Colours that will make your eyes hurt");
 			goodstyle = true;
 		}
 		else {
 			document.getElementById("master_style").href = "minecraftstyle.css";
+			jQuery("#btn3").text("Colours that won't make your eyes hurt");
 			goodstyle= false;
 		}
 	});
